@@ -1,0 +1,207 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    background: linear-gradient(135deg, #212020, #24211f); 
+    background-size: 400% 400%; 
+    animation: gradientAnimation 15s ease infinite; 
+}
+
+/* Keyframes for Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%; /* Start at left */
+    }
+    50% {
+        background-position: 100% 50%; /* Move to right */
+    }
+    100% {
+        background-position: 0% 50%; /* Return to left */
+    }
+}
+
+/* Main Game Container */
+#game-container {
+    text-align: center; 
+    background-color: #fff;
+    border-radius: 15px; 
+    padding: 20px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    width: 90%; 
+    max-width: 450px; 
+    margin: 0 20px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+
+/* Color Box Style */
+#colorBox {
+    width: 100%; 
+    max-width: 250px; 
+    height: 250px;
+    margin-bottom: 20px; 
+    border-radius: 15px; 
+    background-color: #fff;
+    transition: background-color 0.5s ease-in-out; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* General Button Style */
+button {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 12px 24px; 
+    border: none; 
+    font-size: 18px; 
+    cursor: pointer; 
+    border-radius: 10px; 
+    transition: all 0.3s ease; 
+}
+
+/* Hover Effect for Buttons */
+button:hover {
+    background-color: #45a049; 
+    transform: scale(1.1); 
+}
+
+/* Color Options Layout */
+#colorOptions {
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 20px; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+/* Color Option Buttons (Squares) */
+button.color-option {
+    width: 120px;  
+    height: 80px; 
+    margin: 0; 
+    border: none; 
+    cursor: pointer; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    border-radius: 0; 
+}
+
+/* Hover Effect for Color Option Buttons */
+button.color-option:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Game Status Message */
+#gameStatus {
+    font-size: 22px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    transition: color 0.5s ease; 
+}
+
+/* Score Display */
+#score {
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-top: 10px; 
+}
+
+/* New Game Button */
+#newGameButton {
+    background-color: #FF5733; 
+    padding: 15px 30px;
+    font-size: 18px;
+    margin-top: 20px; 
+    border-radius: 10px; 
+}
+
+/* Hover Effect for New Game Button */
+#newGameButton:hover {
+    background-color: #e74c3c; 
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Adjustments for tablets and medium screens */
+    #game-container {
+        padding: 15px; 
+    }
+
+    #colorBox {
+        max-width: 200px; 
+        height: 200px;
+    }
+
+    button.color-option {
+        width: 80px; 
+        height: 80px; 
+    }
+
+    #score, #gameStatus {
+        font-size: 18px; /
+    }
+
+    #newGameButton {
+        font-size: 16px; 
+    }
+}
+
+@media (max-width: 600px) {
+    /* Adjustments for smaller tablets and large mobile devices */
+    #colorBox {
+        max-width: 180px; 
+        height: 180px; 
+    }
+
+    button.color-option {
+        width: 70px; 
+        height: 70px; 
+    }
+
+    #gameStatus {
+        font-size: 18px; 
+    }
+
+    #score {
+        font-size: 18px; 
+    }
+
+    #newGameButton {
+        font-size: 14px; 
+        padding: 12px 24px; 
+    }
+}
+
+@media (max-width: 400px) {
+    /* Adjustments for very small screens like older smartphones */
+    #game-container {
+        padding: 10px; 
+    }
+
+    #colorBox {
+        max-width: 150px;
+        height: 150px; 
+    }
+
+    button.color-option {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    #score, #gameStatus {
+        font-size: 16px; 
+    }
+
+    #newGameButton {
+        font-size: 12px; 
+        padding: 10px 20px;
+    }
+}
